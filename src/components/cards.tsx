@@ -1,11 +1,11 @@
 import data from "../../data.json";
-import addToCart from "../../assets/images/icon-add-to-cart.svg";
-import decrementIcon from "../../assets/images/icon-decrement-quantity.svg";
-import incrementIcon from "../../assets/images/icon-increment-quantity.svg";
-import emptyCart from "../../assets/images/illustration-empty-cart.svg";
-import carbonNeutral from "../../assets/images/icon-carbon-neutral.svg";
-import greenTick from "../../assets/images/icon-order-confirmed.svg";
-import xIcon from "../../assets/images/icon-remove-item.svg"
+import addToCart from "../../public/assets/images/icon-add-to-cart.svg";
+import decrementIcon from "../../public/assets/images/icon-decrement-quantity.svg";
+import incrementIcon from "../../public/assets/images/icon-increment-quantity.svg";
+import emptyCart from "../../public/assets/images/illustration-empty-cart.svg";
+import carbonNeutral from "../../public/assets/images/icon-carbon-neutral.svg";
+import greenTick from "../../public/assets/images/icon-order-confirmed.svg";
+import xIcon from "../../public/assets/images/icon-remove-item.svg"
 import { useEffect, useState } from "react";
 import type { CartEntry, Items } from "../types/types";
 
@@ -60,11 +60,14 @@ const Cards = () => {
       {response.map((item) => (
         <div key={item.name} className="flex flex-col">
           <div className="flex relative justify-center">
-            <img
-              className={`rounded-lg mt-5 ${getQty(item.name) > 0 ? "ring-2 ring-rose-700" : ""}`}
-              src={item.image.mobile}
-              alt={item.name}
-            />
+<picture>
+  <source media="(min-width:1024px)" srcSet={item.image.desktop} />
+  <img
+    className={`rounded-lg mt-5 ${getQty(item.name) > 0 ? "ring-2 ring-rose-700" : ""}`}
+    src={item.image.mobile}
+    alt={item.name}
+  />
+</picture>
             {getQty(item.name) > 0 ? (
               <div className="flex absolute -bottom-5 bg-orange-700 p-3 border border-orange-700 rounded-4xl font-bold items-center">
                 <button

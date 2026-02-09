@@ -2,7 +2,7 @@
 export type Items = {
   name: string;
   price: number;
-  image: { mobile: string; thumbnail: string;};
+  image: { mobile: string; thumbnail: string; desktop: string };
   category?: string;
 };
 
