@@ -7,17 +7,8 @@ import carbonNeutral from "../../assets/images/icon-carbon-neutral.svg";
 import greenTick from "../../assets/images/icon-order-confirmed.svg";
 import xIcon from "../../assets/images/icon-remove-item.svg"
 import { useEffect, useState } from "react";
+import type { CartEntry, Items } from "../types/types";
 
-type Items = {
-  name: string;
-  price?: number;
-  image: { mobile: string; thumbnail: string;};
-  category?: string;
-};
-
-type CartEntry = Items & {
-  quantity: number;
-};
 
 const Cards = () => {
   const response = data;

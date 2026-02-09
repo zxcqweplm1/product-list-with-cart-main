@@ -1,6 +1,6 @@
 // import './App.css'
 
-import Cards, { CartMenu } from "./components/cards"
+import Cards from "./components/cards"
 
 function App() {
 

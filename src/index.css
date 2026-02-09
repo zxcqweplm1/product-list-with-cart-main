@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@theme {
+/* @theme {
     --color-red: hsl(14, 86%, 42%);
     --color-green: hsl(159, 69%, 38%);
 
@@ -10,7 +10,7 @@
     --color-rose-400: hsl(7, 20%, 60%);
     --color-rose-500: hsl(12, 20%, 44%);
     --color-rose-900: hsl(14, 65%, 9%);
-}
+} */
 
 body {
     max-width: 375px;
@@ -22,7 +22,7 @@ body {
 @media(min-width: 1280px) {
     body {
         max-width: 1280px;
-        
+
     }
 }
 
